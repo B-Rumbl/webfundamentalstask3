@@ -3,9 +3,11 @@
 body {
     background-color: #301840;
     color: #9BF2F2;
-    background-image: radial-gradient(#301840,#4C17BF);
+    background-image: radial-gradient(#301840, #4C17BF);
+    font-family: Arial, Helvetica, sans-serif;
     /*position: relative;*/
 }
+
 h4 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
@@ -13,70 +15,40 @@ h4 {
     user-select: none;
 }
 
-/*this is where the players are contained*/
+/*this is where the player is contained*/
 #container {
-    margin: 21px;
+    margin: auto;
     width: 610px;
     height: 144px;
     background-color: #4C17BF;
     background-image: repeating-radial-gradient(21px, #4C17BF, #BF1784);
-    border-radius: 45px;
+    border-radius: 25px;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    /*flex-direction: row;*/
     align-items: center;
+    /*this aligns all items to center of the container box*/
+    justify-content: center;
 }
-/*#container2{
-    margin: 21px;
-    width: 610px;
-    height: 144px;
-    background-color: #4C17BF;
-    background-image: repeating-radial-gradient(21px, #4C17BF, #BF1784);
-    border-radius: 45px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-#container3{
-    margin: 21px;
-    width: 610px;
-    height: 144px;
-    background-color: #4C17BF;
-    background-image: repeating-radial-gradient(21px, #4C17BF, #BF1784);
-    border-radius: 45px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-*/
+
 /*container for the play button*/
 #playcontainer {
     width: 144px;
     height: 89px;
     position: relative;
     padding-left: 34px;
+
 }
-/*#playcontainer2 {
-    width: 144px;
-    height: 89px;
-    position: relative;
-    padding-left: 34px;
-}
-#playcontainer3 {
-    width: 144px;
-    height: 89px;
-    position: relative;
-    padding-left: 34px;
-}*/
 
 /*styling of the play button itself*/
 #playstatic {
     width: 89px;
     height: 89px;
     cursor: crosshair;
-    padding-left: 30px;
-    /*padding right: 30px;
+    /*padding-left: 30px;
+    padding right: 30px;
     animation: neon 1.5s ease-in-out infinite alternate;*/
-
+    text-shadow: 0 0 20px #9BF2F2;
 }
 
 /*#playstatic:nth-child{
@@ -86,11 +58,10 @@ h4 {
 #currenttime {
     width: 45px;
     padding-left: 10px;
-
 }
 
 #slash {
-    padding-left: 10px;
+    padding-left: 5px;
     padding-right: 10px;
 
 }
@@ -102,7 +73,69 @@ h4 {
 #seek {
     width: 150px;
     cursor: crosshair;
-    margin-left: 10px;
+    margin-left: 34px;
+}
+
+/*image containers*/
+#mandala {
+    margin: auto;
+    width: 144px;
+    height: 144px;
+    display: flex;
+}
+
+#bulb {
+    margin: auto;
+    width: 144px;
+    height: 144px;
+    display: flex;
+}
+
+#crab {
+    margin: auto;
+    width: 144px;
+    height: 144px;
+    display: flex;
+}
+
+.songselector {
+    position: relative;
+}
+#gallerycontainer{
+    margin: auto;
+    width: 610px;
+    height: 144px;
+    border-style: solid;
+
+}
+/*image container*/
+.gallery {
+    margin: auto;
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+    border-radius: 25px;
+}
+
+/*this puts the images to select songs in a box*/
+.gallery li img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #4C17BF;
+}
+
+/*hover over image indicator*/
+.gallery li img:hover {
+    border-color: #BF1784;
+    opacity: 55%;
 }
 
 /*neon animation code - 

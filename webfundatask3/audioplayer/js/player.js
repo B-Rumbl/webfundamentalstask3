@@ -1,45 +1,46 @@
-const currentTime = document.getElementById("currenttime") 
+const currentTime = document.getElementById("currenttime")
 const totalTime = document.getElementById("totaltime")
 const playPauseButton = document.getElementById("playstatic")
 const seek = document.getElementById("seek")
 const amnesiaris = document.getElementById("amnesiaris")
 const apocashuffle = document.getElementById("apocashuffle")
 const bleetz = document.getElementById("bleetz")
+/*const pauseButton = document.getElementById("pausebutton")*/
 
 //audio with a capital A is a class that use of "audio" refers to
 const audio = new Audio()
 let seeking = false
 
 //on click listener for song 001
-amnesiaris.onclick = function(){
-    audio.src = "audioplayer/audio/amnesiaris.webm"
+amnesiaris.onclick = function () {
+    audio.src = "webfundatask3/audioplayer/audio/amnesiaris.webm"
 }
 
 //onclick listener for song 002
-apocashuffle.onclick = function(){
-    audio.src = "audioplayer/audio/apocalypseshuffle.webm"
+apocashuffle.onclick = function () {
+    audio.src = "webfundatask3/audioplayer/audio/apocalypseshuffle.webm"
 }
 
 //onclick listener for song 003
-bleetz.onclick = function(){
-    audio.src = "audioplayer\audio\bleetzncheetz2.webm"
+bleetz.onclick = function () {
+    audio.src = "webfundatask3/audioplayer/audio/bleetzncheetz2.webm"
 }
 
 
 //button listener
-playPauseButton.onclick = function(){
-    if (audio.paused){
+playPauseButton.onclick = function () {
+    if (audio.paused) {
         audio.play()
     } else {
-        audio.pause ()
+        audio.pause()
     }
 }
 
 //event triggered when audio ends
-audio.onended = function(){
+audio.onended = function () {
     currenttime.innerHTML = formatTime(0)
     seek.value = 0
-    playpausebutton.src = "images/play.svg"
+    playPauseButton.src = "webfundatask3/audioplayer/images/playstatic.svg"
 }
 //audio listeners above
 audio.oncanplaythrough = function () {
@@ -47,12 +48,12 @@ audio.oncanplaythrough = function () {
 }
 //event triggered when audio plays
 audio.onplay = function () {
-    playpausebutton.src = "images/pause.svg"
+    playPauseButton.src = "webfundatask3/audioplayer/images/pausestatic.svg"
 
 }
 //event triggered when audio paused
 audio.onpause = function () {
-    playpausebutton.src = "images/play.svg"
+    playPauseButton.src = "webfundatask3/audioplayer/images/playstatic.svg"
 }
 //event triggered by metadata load 
 audio.onloadedmetadata = function () {
@@ -68,15 +69,25 @@ audio.ontimeupdate = function () {
     }
 }
 //seek bar listeners
-//event triggeredon interaction with seekbar
+//event triggered on interaction with seekbar
 seek.oninput = function () {
     seeking = true
 }
 //event triggered when seek bar is changed
-seek.onchange = function(){
+seek.onchange = function () {
     audio.currentTime = seek.value
     seeking = false
-} 
+}
+//place image in player container when track selected
+
+//change pause button back to play button when new track is selected
+
+
+
+
+
+
+
 //UTILITY FUNCTIONS
 // takes total seconds (number) and returns a formatted string 
 function formatTime(secs) {
