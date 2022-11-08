@@ -1,0 +1,116 @@
+/*fib seq number ref 21, 34, 55, 89, 144, 233, 377, 610*/
+/*colour hex codes bright pink:#BF1784 magenta:#BF1792 deep purps:#301840 bright purpls:#4C17BF violet:#704BBF light blue:#9BF2F2*/
+body {
+    background-color: #301840;
+    color: #9BF2F2;
+    background-image: radial-gradient(#301840,#4C17BF);
+    /*position: relative;*/
+}
+h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 50;
+    user-select: none;
+}
+
+/*this is where the players are contained*/
+#container {
+    margin: 21px;
+    width: 610px;
+    height: 144px;
+    background-color: #4C17BF;
+    background-image: repeating-radial-gradient(21px, #4C17BF, #BF1784);
+    border-radius: 45px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+/*#container2{
+    margin: 21px;
+    width: 610px;
+    height: 144px;
+    background-color: #4C17BF;
+    background-image: repeating-radial-gradient(21px, #4C17BF, #BF1784);
+    border-radius: 45px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#container3{
+    margin: 21px;
+    width: 610px;
+    height: 144px;
+    background-color: #4C17BF;
+    background-image: repeating-radial-gradient(21px, #4C17BF, #BF1784);
+    border-radius: 45px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+*/
+/*container for the play button*/
+#playcontainer {
+    width: 144px;
+    height: 89px;
+    position: relative;
+    padding-left: 34px;
+}
+/*#playcontainer2 {
+    width: 144px;
+    height: 89px;
+    position: relative;
+    padding-left: 34px;
+}
+#playcontainer3 {
+    width: 144px;
+    height: 89px;
+    position: relative;
+    padding-left: 34px;
+}*/
+
+/*styling of the play button itself*/
+#playstatic {
+    width: 89px;
+    height: 89px;
+    cursor: crosshair;
+    padding-left: 30px;
+    /*padding right: 30px;
+    animation: neon 1.5s ease-in-out infinite alternate;*/
+
+}
+
+/*#playstatic:nth-child{
+    animation: neon 1.5s ease-in-out infinite alternate;
+}*/
+
+#currenttime {
+    width: 45px;
+    padding-left: 10px;
+
+}
+
+#slash {
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+#totaltime {
+    width: 45px;
+}
+
+#seek {
+    width: 150px;
+    cursor: crosshair;
+    margin-left: 10px;
+}
+
+/*neon animation code - 
+@keyframes neon{
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff1177, 0 0 70px #ff1177, 0 0 100px #ff1177, 0 0 150px #ff1177;
+    }
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff1177, 0 0 35px #ff1177, 0 0 50px #ff1177, 0 0 75px #ff1177;;
+    }
+}*/
