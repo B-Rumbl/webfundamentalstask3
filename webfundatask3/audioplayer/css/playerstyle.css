@@ -5,6 +5,7 @@ body {
     color: #9BF2F2;
     background-image: radial-gradient(#301840, #4C17BF);
     font-family: Arial, Helvetica, sans-serif;
+    margin: 10%;
     /*position: relative;*/
 }
 
@@ -18,8 +19,10 @@ h4 {
 /*this is where the player is contained*/
 #container {
     margin: auto;
-    width: 610px;
-    height: 144px;
+    width: auto;
+    max-width: 482px;
+    min-width: 154px;
+    height: auto;
     background-color: #4C17BF;
     background-image: repeating-radial-gradient(21px, #4C17BF, #BF1784);
     border-radius: 25px;
@@ -33,22 +36,39 @@ h4 {
 
 /*container for the play button*/
 #playcontainer {
-    width: 144px;
+    margin: 21px;
+    width: auto;
     height: 89px;
     position: relative;
-    padding-left: 34px;
+    /*padding-left: 34px;*/
+    align-items: center;
+    /*justify-content: center;*/
+}
 
+/*this is a container for the time to make box size flex when changing size of the screen*/
+#timecontainer {
+    display: flex;
+    width: 144px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
 }
 
 /*styling of the play button itself*/
 #playstatic {
     width: 89px;
     height: 89px;
-    cursor: crosshair;
+    cursor: pointer;
     /*padding-left: 30px;
     padding right: 30px;
     animation: neon 1.5s ease-in-out infinite alternate;*/
     text-shadow: 0 0 20px #9BF2F2;
+}
+
+/*place an image of the song selector next to the play button*/
+
+#playerimage {
+    position: absolute;
 }
 
 /*#playstatic:nth-child{
@@ -56,24 +76,29 @@ h4 {
 }*/
 
 #currenttime {
+    font-size: 1.5rem;
     width: 45px;
     padding-left: 10px;
 }
 
 #slash {
+    font-size: 1.5rem;
     padding-left: 5px;
     padding-right: 10px;
 
 }
 
 #totaltime {
+    font-size: 1.5rem;
     width: 45px;
 }
 
 #seek {
-    width: 150px;
-    cursor: crosshair;
-    margin-left: 34px;
+    /*width: auto;*/
+    margin: 21px;
+    display: flex;
+    flex-wrap: wrap;
+
 }
 
 /*image containers*/
@@ -100,14 +125,17 @@ h4 {
 
 .songselector {
     position: relative;
+    display: flex;
+
 }
-#gallerycontainer{
+
+#gallerycontainer {
     margin: auto;
     width: 610px;
     height: 144px;
-    border-style: solid;
-
+    /*border-style: solid;*/
 }
+
 /*image container*/
 .gallery {
     margin: auto;
@@ -118,6 +146,7 @@ h4 {
     gap: 10px;
     list-style: none;
     border-radius: 25px;
+    padding: 0px;
 }
 
 /*this puts the images to select songs in a box*/
@@ -136,6 +165,7 @@ h4 {
 .gallery li img:hover {
     border-color: #BF1784;
     opacity: 55%;
+    cursor: pointer;
 }
 
 /*neon animation code - 
