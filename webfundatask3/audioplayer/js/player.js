@@ -14,16 +14,19 @@ let seeking = false
 //on click listener for song 001
 amnesiaris.onclick = function () {
     audio.src = "webfundatask3/audioplayer/audio/amnesiaris.webm"
+    audio.onpause()
 }
 
 //onclick listener for song 002
 apocashuffle.onclick = function () {
     audio.src = "webfundatask3/audioplayer/audio/apocalypseshuffle.webm"
+    audio.onpause()
 }
 
 //onclick listener for song 003
 bleetz.onclick = function () {
     audio.src = "webfundatask3/audioplayer/audio/bleetzncheetz2.webm"
+    audio.onpause()
 }
 
 

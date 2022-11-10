@@ -3,9 +3,9 @@
 body {
     background-color: #301840;
     color: #9BF2F2;
-    background-image: radial-gradient(#301840, #4C17BF);
+    background-image: repeating-radial-gradient(55px, #301840, #9BF2F2, #4C17BF );
     font-family: Arial, Helvetica, sans-serif;
-    margin: 10%;
+    margin: 5%;
     /*position: relative;*/
 }
 
@@ -19,6 +19,7 @@ h4 {
 /*this is where the player is contained*/
 #container {
     margin: auto;
+    margin-bottom: 21px;
     width: auto;
     max-width: 482px;
     min-width: 154px;
@@ -62,7 +63,9 @@ h4 {
     /*padding-left: 30px;
     padding right: 30px;
     animation: neon 1.5s ease-in-out infinite alternate;*/
-    text-shadow: 0 0 20px #9BF2F2;
+}
+#playstatic:hover{
+    opacity: 1;
 }
 
 /*place an image of the song selector next to the play button*/
@@ -78,14 +81,14 @@ h4 {
 #currenttime {
     font-size: 1.5rem;
     width: 45px;
-    padding-left: 10px;
 }
 
 #slash {
+    align-items: center;
+    justify-content: center;
     font-size: 1.5rem;
     padding-left: 5px;
-    padding-right: 10px;
-
+    padding-right: 5px;
 }
 
 #totaltime {
@@ -155,10 +158,10 @@ h4 {
     width: 100%;
     height: 100%;
     vertical-align: middle;
-    border-radius: 25px;
+    border-radius: 34px;
     border-style: solid;
     border-width: 5px;
-    border-color: #4C17BF;
+    border-color: #BF1784;
 }
 
 /*hover over image indicator*/
