@@ -5,8 +5,6 @@ const seek = document.getElementById("seek")
 const amnesiaris = document.getElementById("amnesiaris")
 const apocashuffle = document.getElementById("apocashuffle")
 const bleetz = document.getElementById("bleetz")
-/*const pauseButton = document.getElementById("pausebutton")*/
-
 //audio with a capital A is a class that use of "audio" refers to
 const audio = new Audio()
 let seeking = false
@@ -28,7 +26,6 @@ bleetz.onclick = function () {
     audio.src = "webfundatask3/audioplayer/audio/bleetzncheetz2.webm"
     audio.onpause()
 }
-
 
 //button listener
 playPauseButton.onclick = function () {
@@ -81,9 +78,12 @@ seek.onchange = function () {
     audio.currentTime = seek.value
     seeking = false
 }
-//place image in player container when track selected
+//volume slider
+const volSlider = document.getElementById("volume")
+volSlider.onchange = function(){
+    audio.volume = volSlider.value/100
+}
 
-//change pause button back to play button when new track is selected
 
 
 

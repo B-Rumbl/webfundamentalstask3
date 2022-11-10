@@ -21,8 +21,8 @@ h4 {
     margin: auto;
     margin-bottom: 21px;
     width: auto;
-    max-width: 482px;
-    min-width: 154px;
+    max-width: 750px;
+    min-width: 233px;
     height: auto;
     background-color: #4C17BF;
     background-image: repeating-radial-gradient(21px, #4C17BF, #BF1784);
@@ -64,15 +64,10 @@ h4 {
     padding right: 30px;
     animation: neon 1.5s ease-in-out infinite alternate;*/
 }
-#playstatic:hover{
-    opacity: 1;
-}
 
 /*place an image of the song selector next to the play button*/
 
-#playerimage {
-    position: absolute;
-}
+
 
 /*#playstatic:nth-child{
     animation: neon 1.5s ease-in-out infinite alternate;
@@ -97,32 +92,29 @@ h4 {
 }
 
 #seek {
-    /*width: auto;*/
     margin: 21px;
-    display: flex;
-    flex-wrap: wrap;
-
+    width: 233px;
 }
 
 /*image containers*/
 #mandala {
     margin: auto;
-    width: 144px;
-    height: 144px;
+    width: 233px;
+    height: 233px;
     display: flex;
 }
 
 #bulb {
     margin: auto;
-    width: 144px;
-    height: 144px;
+    width: 233px;
+    height: 233px;
     display: flex;
 }
 
 #crab {
     margin: auto;
-    width: 144px;
-    height: 144px;
+    width: 233px;
+    height: 233px;
     display: flex;
 }
 
@@ -134,7 +126,7 @@ h4 {
 
 #gallerycontainer {
     margin: auto;
-    width: 610px;
+    width: 750px;
     height: 144px;
     /*border-style: solid;*/
 }
@@ -151,7 +143,10 @@ h4 {
     border-radius: 25px;
     padding: 0px;
 }
-
+.gallery h4{
+    position: relative;
+    font-size: 1rem;
+}
 /*this puts the images to select songs in a box*/
 .gallery li img {
     object-fit: cover;
@@ -164,11 +159,47 @@ h4 {
     border-color: #BF1784;
 }
 
+
 /*hover over image indicator*/
 .gallery li img:hover {
     border-color: #BF1784;
     opacity: 55%;
     cursor: pointer;
+}
+
+#volcont{
+    position: relative;
+    width: 130px;
+}
+#volume{
+    rotate: -90deg;
+    position: absolute;
+    left: -55px;
+    width: 89px;
+    
+    
+}
+
+/*changing the style of the input slider*/
+input[type=range]{
+    -webkit-appearance: none;
+    /*margin-right: 15px;
+    width: 200px;*/
+    height: 8px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+    background-image: radial-gradient( #9BF2F2, #301840);
+    background-repeat: no-repeat;
+}
+input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  background: #9BF2F2;
+  cursor: pointer;
+  box-shadow: 0 0 2px 0 #555;
+  vertical-align: middle;
 }
 
 /*neon animation code - 

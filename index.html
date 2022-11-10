@@ -12,36 +12,39 @@
 
 <body>
     <div id="container">
-        <div id="playcontainer"> <img id="playstatic" src="webfundatask3/audioplayer/images/playstatic.svg"
-                alt="play button">
+        <div id="volcont">
+        <input type="range" id="volume" min="0" max="100"/>
+        </div>
+        <div id="playcontainer">
+            <img id="playstatic" src="webfundatask3/audioplayer/images/playstatic.svg" alt="play button">
         </div>
         <div id="timecontainer">
             <h4 id="currenttime">0:00</h4>
             <h4 id="slash">/</h4>
             <h4 id="totaltime">00:00</h4>
         </div>
-        <input id="seek" type="range" min="0" value="0" disabled />
-        <div id="playerimage">
-            <!--this is for placing the image from the song title next to the play button-->
-            <!--div id="pausebutton">
-            <img src="webfundatask3/audioplayer/images/pausestatic.svg" alt="pause button">
-        </div>-->
-        </div>
+        <input id="seek" type="range" min="0" value="0" disabled/>
+    </div>
     </div>
     <div class="songselector">
         <div id="gallerycontainer">
             <ul class="gallery">
                 <li>
                     <div id="amnesiaris"><img id="mandala" src="webfundatask3/audioplayer/images/Mandalavibes001.png"
-                            alt="mandala art" /></div>
+                            alt="mandala art" />
+                        <!--h4>Amnesiaris</h4-->
+                    </div>
                 </li>
                 <li>
                     <div id="apocashuffle"><img id="bulb" src="webfundatask3/audioplayer/images/mandelbarnacle.jpg"
-                            alt="3d fractal sculpture art" /></div>
+                            alt="3d fractal sculpture art" />
+                        <!--h4>Apocalypse Shuffle</h4-->
+                    </div>
                 </li>
                 <li>
                     <div id="bleetz"><img id="crab" src="webfundatask3/audioplayer/images/Spacecrab003.png"
                             alt="virtual reality cosmic crab artwork">
+                        <!--h4>Bleetz + Cheetz</h4-->
                 </li>
         </div>
     </div>
